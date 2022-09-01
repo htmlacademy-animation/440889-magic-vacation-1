@@ -1,6 +1,10 @@
 .social-block {
   position: relative;
 
+  .social-block__list {
+    opacity: 0;
+  }
+
   &:hover {
     .social-block__list {
       opacity: 1;
@@ -87,7 +91,7 @@
   top: 100%;
   right: 0;
   margin-top: 1.5rem;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
 
   @media (min-width: $stop-scaling) {
@@ -168,6 +172,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -182,6 +187,11 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     color: $c-light;
     background-color: $c-dark;
+  }
+
+  &--fadein {
+    transition: opacity 2s;
+    opacity: 1;
   }
 
   &:hover {
