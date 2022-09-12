@@ -184,5 +184,29 @@
 }
 
 .chat__footer {
-  margin-top: auto;
+  input {
+    width: 0;
+    transition: all 4s;
+  }
 }
+
+
+.screen--game.active {
+  .chat__footer {
+    form {
+      justify-content: end;
+    }
+
+    input {
+      position: absolute;
+      width: calc(100% - 21rem);
+      right: 15%;
+    }
+
+    button {
+      flex-grow: 0;
+    }
+  }
+}
+
+
