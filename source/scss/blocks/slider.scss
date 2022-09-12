@@ -40,6 +40,10 @@
     .slider__item-text {
       align-self: flex-end;
 
+      margin-left: 0;
+      margin-right: -1rem;
+      transition: 2s opacity linear 1s, 2s margin-right linear 1s;
+
       @media (max-width: $mobile) and (orientation: landscape) {
         align-self: flex-start;
       }
@@ -93,9 +97,12 @@
 .slider__item-text {
   margin-top: 3.6rem;
   margin-bottom: 0;
+  margin-left: 2rem;
+  opacity: 0;
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  transition: 2s opacity, 2s margin-left;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -274,5 +281,19 @@
       height: 0.4rem;
       background-color: $c-light;
     }
+  }
+}
+
+.screen--story.active {
+  .swiper-slide-active {
+    .slider__item-text {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
+
+  .slider__item.swiper-slide-next .slider__item-text {
+    margin-right: 0;
+    opacity: 1;
   }
 }

@@ -86,13 +86,23 @@
   }
 }
 
+.screen--hidden {
+  .intro__message {
+    margin-bottom: -2rem;
+    opacity: 0;
+  }
+}
+
 .intro__message {
   flex: none;
   width: 50.9rem;
+  margin-bottom: 0;
   max-width: 50%;
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  transition: opacity 2s ease-in, margin-bottom 2s ease;
+  opacity: 1;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
